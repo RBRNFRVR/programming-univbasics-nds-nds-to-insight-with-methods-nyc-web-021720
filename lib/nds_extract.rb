@@ -21,4 +21,11 @@ end
 def directors_totals(nds)
   result = {}
   nil
+    dir_index = 0 
+  while dir_index < nds.length do 
+    dir = nds[dir_index]
+    result[dir[:name]] = gross_for_director(dir)
+    dir_index += 1 
+  end 
+  result
 end
